@@ -22,6 +22,7 @@ function playgame(e){
     let options = ['rock', 'paper', 'scissors'];
     let userSelection = e.path[0].id;
     let aiChoice = options[Math.floor(Math.random()*options.length)];
+
     
     if (aiChoice=='rock' && userSelection=='paper'){displayText("Win", aiChoice, userSelection);}
     else if (aiChoice=='rock' && userSelection=='paper'){displayText("Win", aiChoice, userSelection);}
@@ -37,11 +38,46 @@ function playgame(e){
 }
 
 function displayText(result, ai, user){
+
     let div = document.querySelector('#result');
-    div.innerHTML = `Your Choice: ${user}
-    AI's Choice: ${ai}
-    Result: ${result}`;
+    //reseting the result text before the beggining of best of 5
+    if (count == 0){
+        div.innerHTML = '';
+    }
+    count++;
+    console.log(count);
+
+    if (result == 'Win'){
+        winCount++;
+    }
+    else if (result == 'Lose'){
+        loseCount++;
+    }
+
+    div.innerHTML += `<br>Round ${count}:
+    <br>Your Choice: ${user}
+    <br>AI's Choice: ${ai}
+    <br>Result: ${result}`;
+
+    if (count == 5){
+        if (winCount > loseCount){
+            div.innerHTML += ``
+        }
+        else if (winCount < loseCount){
+            div.innerHTML += ``
+        }
+        else{
+            div.innerHTML += ``
+        }
+        count = 0;
+        winCount = 0;
+        loseCount = 0;
+    }
 }
+
+let count = 0;
+let winCount = 0;
+let loseCount =0;
 
 rockbtn = document.querySelector('#rock');
 paperbtn = document.querySelector('#paper');
