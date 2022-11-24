@@ -36,8 +36,11 @@ function playgame(e){
     else if (aiChoice=='scissors' && userSelection=='scissors'){displayText("Tie", aiChoice, userSelection);}   
 }
 
-function displayText(result){
+function displayText(result, ai, user){
     let div = document.querySelector('#result');
+    div.innerHTML = `Your Choice: ${user}
+    AI's Choice: ${ai}
+    Result: ${result}`;
 }
 
 rockbtn = document.querySelector('#rock');
