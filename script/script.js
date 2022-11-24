@@ -23,17 +23,17 @@ function playgame(e){
     let userSelection = e.path[0].id;
     let aiChoice = options[Math.floor(Math.random()*options.length)];
     
-    if (aiChoice=='rock' && userSelection=='paper'){displayText("Tie");}
-    else if (aiChoice=='rock' && userSelection=='paper'){displayText("Win");}
-    else if (aiChoice=='rock' && userSelection=='scissors'){displayText("Lose");}
+    if (aiChoice=='rock' && userSelection=='paper'){displayText("Tie", aiChoice, userSelection);}
+    else if (aiChoice=='rock' && userSelection=='paper'){displayText("Win", aiChoice, userSelection);}
+    else if (aiChoice=='rock' && userSelection=='scissors'){displayText("Lose", aiChoice, userSelection);}
 
-    else if (aiChoice=='paper' && userSelection=='rock'){displayText("Lose");}
-    else if (aiChoice=='paper' && userSelection=='paper'){displayText("Tie");}
-    else if (aiChoice=='paper' && userSelection=='scissors'){displayText("Win");}
+    else if (aiChoice=='paper' && userSelection=='rock'){displayText("Lose", aiChoice, userSelection);}
+    else if (aiChoice=='paper' && userSelection=='paper'){displayText("Tie", aiChoice, userSelection);}
+    else if (aiChoice=='paper' && userSelection=='scissors'){displayText("Win", aiChoice, userSelection);}
 
-    else if (aiChoice=='scissors' && userSelection=='rock'){displayText("Win");}
-    else if (aiChoice=='scissors' && userSelection=='paper'){displayText("Lose");}
-    else if (aiChoice=='scissors' && userSelection=='scissors'){displayText("Tie");}   
+    else if (aiChoice=='scissors' && userSelection=='rock'){displayText("Win", aiChoice, userSelection);}
+    else if (aiChoice=='scissors' && userSelection=='paper'){displayText("Lose", aiChoice, userSelection);}
+    else if (aiChoice=='scissors' && userSelection=='scissors'){displayText("Tie", aiChoice, userSelection);}   
 }
 
 function displayText(result){
