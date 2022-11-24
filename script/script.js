@@ -19,7 +19,7 @@ function startgame(){
 
 
 function playgame(e){
-    console.log(e);
+    let selection = e.path[0].id;
 }
 
 rockbtn = document.querySelector('#rock');
