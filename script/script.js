@@ -38,7 +38,6 @@ function playgame(e){
 }
 
 function displayText(result, ai, user){
-
     let div = document.querySelector('#result');
     //reseting the result text before the beggining of best of 5
     if (count == 0){
@@ -61,13 +60,19 @@ function displayText(result, ai, user){
 
     if (count == 5){
         if (winCount > loseCount){
-            div.innerHTML += ``
+            div.innerHTML += `<br><br><br>Final Scores:
+            <br>YOU-AI : ${winCount}-${loseCount}
+            <br>You Won!!`
         }
         else if (winCount < loseCount){
-            div.innerHTML += ``
+            div.innerHTML += `<br><br><br>Final Scores:
+            <br>YOU-AI : ${winCount}-${loseCount}
+            <br>You Lose!!`
         }
         else{
-            div.innerHTML += ``
+            div.innerHTML += `<br><br><br>Final Scores:
+            <br>YOU-AI : ${winCount}-${loseCount}
+            <br>Its a tie!!`
         }
         count = 0;
         winCount = 0;
