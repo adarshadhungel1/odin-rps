@@ -19,12 +19,12 @@ function startgame(){
 
 
 function playgame(e){
-
+    console.log(e);
 }
 
 rockbtn = document.querySelector('#rock');
 paperbtn = document.querySelector('#paper');
-scissorbtn = document.querySelector('#scissor');
+scissorbtn = document.querySelector('#scissors');
 
 rockbtn.addEventListener('click', playgame);
 paperbtn.addEventListener('click', playgame);
