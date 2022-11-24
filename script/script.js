@@ -17,4 +17,15 @@ function startgame(){
     else {alert("Unexpected Input!!")};
     }
 
-startgame()
+
+function playgame(e){
+
+}
+
+rockbtn = document.querySelector('#rock');
+paperbtn = document.querySelector('#paper');
+scissorbtn = document.querySelector('#scissor');
+
+rockbtn.addEventListener('click', playgame);
+paperkbtn.addEventListener('click', playgame);
+scissorbtn.addEventListener('click', playgame);
