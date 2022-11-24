@@ -27,5 +27,5 @@ paperbtn = document.querySelector('#paper');
 scissorbtn = document.querySelector('#scissor');
 
 rockbtn.addEventListener('click', playgame);
-paperkbtn.addEventListener('click', playgame);
+paperbtn.addEventListener('click', playgame);
 scissorbtn.addEventListener('click', playgame);
