@@ -23,7 +23,7 @@ function playgame(e){
     let userSelection = e.path[0].id;
     let aiChoice = options[Math.floor(Math.random()*options.length)];
     
-    if (aiChoice=='rock' && userSelection=='paper'){displayText("Tie", aiChoice, userSelection);}
+    if (aiChoice=='rock' && userSelection=='paper'){displayText("Win", aiChoice, userSelection);}
     else if (aiChoice=='rock' && userSelection=='paper'){displayText("Win", aiChoice, userSelection);}
     else if (aiChoice=='rock' && userSelection=='scissors'){displayText("Lose", aiChoice, userSelection);}
 
